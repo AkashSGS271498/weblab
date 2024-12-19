@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang ="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name ="viewport" content="width=device-width,initial-scale=1.0">
+        <title>form</title>
+        <style>
+            body{
+                background-color: aqua;
+            }
+            .container{
+                border: 2px solid black;
+                padding: 20px;
+                margin: 20px auto;
+                width: 30%;
+                background-color: aliceblue;
+            }
+            .button{
+                text-align: center;
+            }
+            input[type="submit"]{
+                background-color: green;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover{
+                background-color: darkgreen;
+            }
+            h1{
+                text-align: center;
+            }
+            div{
+                margin:5px 0px;
+            }
+           
+        </style>    
+        </head>
+<body>
+    <h1>Registration Form</h1>
+    <form class="container">
+        <div >
+            <label for="name">FIRST Name:</label>
+            <br>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        
+        <br>
+        <div>
+        <label for="name">LAST Name:</label>
+        <br>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <br>
+        <div>
+        <lbael for="email" >Email:</lbael>
+        <br>
+        <input type="email" id="email" placeholder="Enter your email" required>
+    </div>
+        <br>
+        <div>
+        <label for="password">Password:</label>
+        <br>
+        <input type="password" id="password" placeholder="Enter your password" required>
+    </div>
+        <br>  
+        <div>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">Other</label>
+    </div>
+        <br>
+        <div>
+            <label for="DOB">Date of Birth:</label>
+            <br>
+            <input type="date" id ="DOB" required>
+        </div>
+        <br>
+        <div>
+        <label for="country">Country:</label>
+        <select id="country" required>
+            <option value="">Select Country</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+        </select>
+    </div>
+        <br>
+        <div class="button">
+        
+        <input type="submit" id="submit">
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Layouts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .nav-bar {
+            width: 100%;
+            height: 80px;
+            background-color: aqua;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .nav-bar a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        .nav-bar a:hover {
+            color: darkblue;
+        }
+        .parent {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+        .left, .right, .rightmost {
+            height: 300px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .left {
+            width: 35%;
+            background-color: bisque;
+        }
+        .right {
+            width: 35%;
+            background-color: blueviolet;
+            color: white;
+        }
+        .rightmost {
+            width: 20%;
+            background-color: brown;
+            color: white;
+        }
+        .right img, .left img {
+            margin-top: 10px;
+            border-radius: 50%;
+        }
+        .list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .list li {
+            margin: 10px 0;
+        }
+        .list a {
+            text-decoration: none;
+            color: white;
+        }
+        .list a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            width: 100%;
+            height: 120px;
+            background-color: aquamarine;
+            text-align: center;
+            padding: 10px;
+            border-top: 2px solid #ccc;
+        }
+        .table1 {
+            width: 100%;
+            background-color: white;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .table1 td, .table1 th {
+            padding: 10px;
+            border: 1px solid bisque;
+            text-align: center;
+        }
+        .table1 a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .table1 a:hover {
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <h1>THE TIMES OF INDIA</h1>
+        <div>
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+        </div>
+    </div>
+    <div class="parent">
+        <div class="left">
+            <h2>Left Section</h2>
+            <img src="profile.jpg" alt="Example Image" width="80">
+            <p>This image consists of a superhero named Batman, who is a good hero.</p>
+        </div>
+        <div class="right">
+            <h2>Right Section</h2>
+            <img src="profile.jpg" alt="Example Image" width="80">
+            <figcaption>Batman</figcaption>
+            <p>This image consists of a superhero named Batman, who is a good hero.</p>
+        </div>
+        <div class="rightmost">
+            <h2>Rightmost Section</h2>
+            <ul class="list">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>   
+        </div>
+    </div>
+    <div class="footer">
+        <h2>Footer</h2>
+        <table class="table1">
+            <tr>
+                <td><a href="#">Link 1</a></td>
+                <td><a href="#">Link 2</a></td>
+                <td><a href="#">Link 3</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">Link 4</a></td>
+                <td><a href="#">Link 5</a></td>
+                <td><a href="#">Link 6</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">Link 7</a></td>
+                <td><a href="#">Link 8</a></td>
+                <td><a href="#">Link 9</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

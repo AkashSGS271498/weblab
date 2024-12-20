@@ -1,0 +1,25 @@
+<?php
+$counterFile = "counter.txt";
+
+if (!file_exists($counterFile)) {
+    file_put_contents($counterFile, "0");
+}
+
+$newCount = file_get_contents($counterFile) + 1;
+file_put_contents($counterFile, $newCount);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Visitor Counter</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 50px; }
+        h1 { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <p>Visitor Number: <strong><?php echo $newCount; ?></strong></p>
+</body>
+</html>

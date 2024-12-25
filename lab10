@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX and JSON Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+    #content, #json-content { margin: 10px auto; padding: 10px; border: 1px solid #ddd; width: 300px; background: #f9f9f9; }
+    button { margin: 5px; padding: 10px 20px; cursor: pointer; background-color: green; }
+  </style>
+</head>
+<body>
+  <h1>AJAX & JSON Example</h1>
+  <div id="content">Text Content will load here...</div>
+  <button onclick="loadText()">Load Text (jQuery)</button>
+  <button onclick="loadTextWithoutJQuery()">Load Text (Without jQuery)</button>
+  <div id="json-content">JSON Content will load here...</div>
+  <button onclick="loadJSON()">Load JSON (getJSON)</button>
+  <button onclick="parseJSON()">Load JSON (parseJSON)</button>
+
+  <script>
+    // Load text using jQuery
+    function loadText() {
+      $.get("textfile.txt", data => $("#content").text(data));
+    }
+
+    // Load text without jQuery
+    function loadTextWithoutJQuery() {
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", "textfile.txt", true);
+      xhr.onload = () => {
+        if (xhr.status === 200) {
+          document.getElementById("content").textContent = xhr.responseText;
+        }
+      };
+      xhr.send();
+    }
+
+    // Load JSON using getJSON
+    function loadJSON() {
+      $.getJSON("data.json", data => {
+        $("#json-content").text(`Name: ${data.name}, Age: ${data.age}, City: ${data.city}`);
+      });
+    }
+
+    // Load JSON using parseJSON
+    function parseJSON() {
+  $.get("data.json", data => {
+    $("#json-content").text(`Name: ${data.name}, Age: ${data.age}, City: ${data.city}`);
+  });
+}
+  </script>
+</body>
+</html>
